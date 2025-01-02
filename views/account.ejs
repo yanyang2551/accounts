@@ -8,12 +8,22 @@
     <title>accounts</title>
 </head>
 <body>
+<a href="/">回到首页</a>
 <h1>account</h1>
 <h1>列表页</h1>
 <ul>
-    <li>
-        <div><%= title%></div>
-    </li>
+    <% accounts.forEach(account =>{ %>
+        <li>
+            <h3><%= account.time %></h3>
+            <div class="content">
+                <span><%= account.remarks %></span>
+                <span><%= account.type == 1 ? '收入' : account.type == -1 ? '支出' : '' %></span>
+                <span><%= account.account %> 元</span>
+            </div>
+        </li>
+    <% }) %>
+
+    <div><%= title %></div>
 </ul>
 </body>
 </html>
