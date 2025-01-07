@@ -55,6 +55,6 @@ const run = async () => {
     // 正则
     // let result = await aboutModel.find({name: /3/})
     // let result = await aboutModel.find({name: new RegExp(2)})
-    console.log(result)
+    // console.log(result)
 }
 run()
